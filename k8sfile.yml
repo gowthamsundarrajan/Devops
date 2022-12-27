@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ABCTech
+spec:
+  containers:
+  - name: abccontainer
+    image: gowthamsundarrajan/project:latest
