@@ -1,12 +1,12 @@
 ---
 - name: Deploy docker image for dockerhub
- hosts: localhost
- become: yes
- tasks:
+  hosts: localhost
+  become: yes
+  tasks:
     - name: Create an image for ABCtech
       community.docker.docker_container:
         name: abc
         image: gowthamsundarrajan/project:6
         ports:
-           - "32480:80"
+          - 32480:80
         restart_policy: always
