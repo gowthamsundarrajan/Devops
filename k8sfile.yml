@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ABCTech
+  name: abctech
 spec:
   containers:
   - name: abccontainer
