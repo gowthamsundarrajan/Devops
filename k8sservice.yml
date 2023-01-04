@@ -3,13 +3,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ABCTech
+  name: nodeportservice
 spec:
   selector:
-    app: abc
-  type: clusterIP
+    app: abctech
+  type: NodePort
   ports:
   - protocol: TCP
     port: 5000
-    targetPort: 3000
+    targetPort: 80
     nodePort: 31110
