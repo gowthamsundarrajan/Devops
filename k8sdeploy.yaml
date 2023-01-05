@@ -3,12 +3,17 @@ kind: Deployment
 metadata:
   name: abc-deployment
 spec:
-  replicas: 2 
+  selector:
+    matchLabels:
+      app: abc_deploy
+  replicas: 2
   template:
     metadata:
       labels:
         app: abc_deploy
     spec:
       containers:
-      - name: abccontainer
+      - name: abc
         image: gowthamsundarrajan/project:1
+        ports:
+        - containerPort: 80
